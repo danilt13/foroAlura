@@ -35,7 +35,7 @@ public class TokenService {
         try {
             var algoritmo = Algorithm.HMAC256(secret);
             return JWT.require(algoritmo)
-                    .withIssuer("API Voll.med")
+                    .withIssuer("foro")
                     .build()
                     .verify(tokenJWT)
                     .getSubject();
